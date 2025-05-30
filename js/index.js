@@ -1,4 +1,4 @@
-import User from "./user.js";
+import User from "./modules.js";
 
 let user1 = new User("Smriti", 25);
 let user2 = new User("Shruti", 15);
