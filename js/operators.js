@@ -8,7 +8,7 @@ Ternary Operators
 Type Operators*/
 
 //Arithmetic Operators
-function add(x, y) {
+/*function add(x, y) {
   let a = x + y;
   console.log("Sum:", a);
   return a;
@@ -60,4 +60,17 @@ function decrement(z, step = 2) {
   return s;
 }
 let t = 1;
-let v = decrement(t);
+let v = decrement(t);*/
+
+//logical operators
+let a = 4;
+a &&= 2;
+console.log("logical operator &&=", a); // 2, because a is truthy
+
+let b = 4;
+b ||= 2;
+console.log("logical operator ||=", b); // 2, because a is truthy
+
+let x = null; // Nullish
+x ??= 20;
+console.log("logical operator ??=", x); // 20
