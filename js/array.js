@@ -73,3 +73,73 @@ const [firstNum, secondNum, ...restOfNumbers] = numbers;
 console.log(firstNum); // 1
 console.log(secondNum); // 2
 console.log(restOfNumbers); // [3, 4, 5]
+
+//control structure example
+// if-else,switch,for,while,do-while
+const age = 20;
+if (age < 18) {
+  console.log("You are a minor.");
+} else if (age >= 18 && age < 65) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are a senior citizen.");
+}
+
+//function inside function example
+function outerFunction(user) {
+  function innerFunction(greeting) {
+    return greeting + "," + user + "!";
+  }
+  return innerFunction("Hello");
+}
+
+console.log(outerFunction("Alice")); // Output: Hello, Alice!
+//Using return greeting, name returns only name due to the comma operator.
+// To combine greeting and name into a single string, use a template literal(${ greeting }, ${ name }!) or
+// string concatenation(greeting + ', ' + name + '!').
+
+//callback function example
+function displayResult(result) {
+  console.log("Result:", result);
+}
+
+function calculateSum(a, b, callback) {
+  const sum = a + b;
+  callback(sum); // Call the callback with the result
+}
+
+calculateSum(5, 3, displayResult); // Output: Result: 8
+
+//primitive vs reference types example
+//primitive
+let a1 = 4;
+let a2 = a1;
+a2 = 3;
+console.log(a1); // 4, primitive type (number) is copied by value
+console.log(a2); // 3
+
+let s1 = "hello";
+let s2 = s1;
+s2 = "world";
+console.log(s1); // hello, primitive type (number) is copied by value
+console.log(s2); //world
+//reference
+let arr1 = [1, 2, 3]; // Reference (array)
+let arr2 = arr1; // Copy of reference
+arr2[3] = 4;
+
+console.log(arr1); // Output: [1, 2, 3, 4] (original modified)
+console.log(arr2); // Output: [1, 2, 3, 4]
+
+//join array
+let arr = ["apple", "banana", "cherry"];
+let joinedString = arr.join(" +");
+console.log(joinedString); // Output: "apple + banana + cherry"
+
+const container = document.getElementById("container");
+const button = document.getElementById("btn");
+button.classList.add("active");
+
+button.addEventListener("click", () => {
+  alert("Button clicked!");
+});
