@@ -4,11 +4,11 @@ function myfunction(a, b) {
   return c;
 }
 myfunction(1, 2); // returns 3
-normal function
+//normal function
 hello = function () {
   return "Hello World!";
 };
-arrow (ES6) function
+//arrow (ES6) function
 let hello = "";
 hello = () => {
   return "Hello World!";
